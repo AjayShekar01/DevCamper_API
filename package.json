@@ -1,0 +1,19 @@
+{
+  "name": "goodfood_api",
+  "version": "1.0.0",
+  "description": "GoodFood_Backend",
+  "main": "server.js",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  },
+  "scripts": {
+    "dev": "nodemon server",
+    "start": "set NODE_ENV=production && node server"
+  },
+  "author": "",
+  "license": "MIT"
+}
