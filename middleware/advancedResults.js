@@ -7,6 +7,8 @@ const advancedResults = (model, populate) => async (req, res, next) => {
   //Fields to exclude
   const removeFields = ["select", "sort", "page", "limit"];
 
+  console.log(reqQuery);
+  
   //Loop over remove Fields and delete them from reqQuery
   removeFields.forEach(param => delete reqQuery[param]);
 
@@ -14,8 +16,7 @@ const advancedResults = (model, populate) => async (req, res, next) => {
 
   //create query string
   let queryStr = JSON.stringify(reqQuery);
-  // console.log(query);
-  // console.log(queryStr);
+  
 
   //create operators ($gt, $gte, etc)
   queryStr = queryStr.replace(/\b(g|gte|lt|lte|in)\b/g, match => `$${match}`);
